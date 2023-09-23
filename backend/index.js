@@ -39,16 +39,18 @@ app.post('/upload', upload.single('file'), (req, res) => {
       console.error('Error reading file:', err);
       // Handle the error, if any
     } else {
-      //console.log('File data:', data);
+      // Analyze the text and get the results
+      const analysisResult = analyzeText(data);
 
-      // Calculate the top 5 most frequently occurring words
-      const topWords = getTopWords(data);
+      // Log the top 5 most frequently occurring words
+      console.log('Top 5 Words:', analysisResult.top5Words);
 
-      // Log or send the topWords data as needed
-      console.log('Top 5 Words:', topWords);
+      // Log the top 5 most frequently co-occurring word pairs
+      console.log('Top 5 Co-occurring Word Pairs:', analysisResult.top5CoOccurringWordPairs);
 
-      // You can also send it as a response to the client if needed
-      // res.json({ topWords });
+      // Log the frequency of each word
+      console.log('Word Frequencies:', analysisResult.wordFrequencies);
+
     }
   });
 });

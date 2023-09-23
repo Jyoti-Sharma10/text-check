@@ -1,26 +1,67 @@
 function analyzeText(text) {
-    // Perform word frequency analysis here and return the results
-    // You can use regular expressions and JavaScript data structures to count word frequencies
-    // For example, you can split 'text' into words and count their occurrences
-    // Example code:
+    // Check if the text is empty or contains no words
+    if (!text.trim()) {
+      return {
+        top5Words: [],
+        top5CooccurringWordPairs: [],
+        wordFrequencies: {},
+      };
+    }
+  
     const words = text.toLowerCase().split(/\s+/);
-    const wordCounts = {};
+    const wordFrequencies = new Map();
+    const cooccurringPairs = new Map();
   
-    words.forEach((word) => {
-      if (word in wordCounts) {
-        wordCounts[word]++;
+    // Count word frequencies and co-occurring pairs
+    for (let i = 0; i < words.length; i++) {
+      const word = words[i];
+      // Count word frequencies
+      if (wordFrequencies.has(word)) {
+        wordFrequencies.set(word, wordFrequencies.get(word) + 1);
       } else {
-        wordCounts[word] = 1;
+        wordFrequencies.set(word, 1);
       }
-    });
   
-    // Sort wordCounts and return the top 5 occurring words
-    const sortedWords = Object.keys(wordCounts).sort((a, b) => wordCounts[b] - wordCounts[a]);
-    const top5Words = sortedWords.slice(0, 5);
+      // Count co-occurring pairs
+      if (i < words.length - 1) {
+        const pair = `${word} ${words[i + 1]}`;
+        if (cooccurringPairs.has(pair)) {
+          cooccurringPairs.set(pair, cooccurringPairs.get(pair) + 1);
+        } else {
+          cooccurringPairs.set(pair, 1);
+        }
+      }
+    }
   
-    return { wordFrequencies: top5Words };
+    // Sort word frequencies
+    const sortedWordFrequencies = [...wordFrequencies.entries()].sort(
+      (a, b) => b[1] - a[1]
+    );
+  
+    // Get the top 5 occurring words
+    const top5Words = sortedWordFrequencies.slice(0, 5).map((entry) => entry[0]);
+  
+    // Sort co-occurring pairs
+    const sortedCooccurringPairs = [...cooccurringPairs.entries()].sort(
+      (a, b) => b[1] - a[1]
+    );
+  
+    // Get the top 5 co-occurring word pairs
+    const top5CooccurringWordPairs = sortedCooccurringPairs
+      .slice(0, 5)
+      .map((entry) => entry[0]);
+  
+    // Convert wordFrequencies Map to a regular object
+    const wordFrequenciesObject = Object.fromEntries(wordFrequencies);
+  
+    return {
+      top5Words,
+      top5CooccurringWordPairs,
+      wordFrequencies: wordFrequenciesObject,
+    };
   }
   
   module.exports = {
     analyzeText,
   };
+  
