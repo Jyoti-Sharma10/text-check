@@ -1,0 +1,100 @@
+/*styles for the responsive image */
+.responsive-image {
+  max-width: 70%;
+  height: 60vh;
+  display: block;
+  margin: 0 auto;
+  object-fit: fill;
+}
+
+@media (max-width: 768px) {
+  .responsive-image {
+    width: 70%;
+    max-height: 50vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .responsive-image {
+    width: 70%;
+    max-height: 40vh;
+  }
+}
+
+/* Adjust card width and height for different screen sizes */
+.rectangular-card {
+  box-sizing: border-box;
+  width: 200px; 
+  height: 100px; 
+  margin: 10px auto; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for small screens (up to 576px) */
+@media (max-width: 576px) {
+  .rectangular-card {
+    width: 150px;
+    height: 75px;
+  }
+}
+
+/* Media query for medium screens (577px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .rectangular-card {
+    width: 180px;
+    height: 90px;
+  }
+}
+
+/* Media query for large screens (769px to 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .rectangular-card {
+    width: 200px;
+    height: 100px;
+  }
+}
+
+/* CSS for column headings */
+.column-heading {
+  display: flex;
+  align-items: center;
+}
+
+/* Center the table horizontally */
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Reduce the width of the table and adjust column widths */
+.table {
+  border-collapse: collapse;
+  width: 60%; 
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th:first-child,
+.table td:first-child {
+  width: 70%; 
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+  width: 30%; 
+}
+
+.table th {
+  background-color: #f2f2f2;
+}

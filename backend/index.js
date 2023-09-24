@@ -31,13 +31,14 @@ app.post('/upload', upload.single('file'), (req, res) => {
   console.log(req.file);
 
   // Assuming you want to send a response back to the client
-  res.json({ message: 'File uploaded successfully!' });
+  
 
   // Now you can use 'filePath' when reading the file
   fs.readFile(filePath, 'utf-8', (err, data) => {
     if (err) {
       console.error('Error reading file:', err);
       // Handle the error, if any
+      res.status(500).json({error: 'Error reading file'})
     } else {
       // Analyze the text and get the results
       const analysisResult = analyzeText(data);
@@ -46,11 +47,11 @@ app.post('/upload', upload.single('file'), (req, res) => {
       console.log('Top 5 Words:', analysisResult.top5Words);
 
       // Log the top 5 most frequently co-occurring word pairs
-      console.log('Top 5 Co-occurring Word Pairs:', analysisResult.top5CoOccurringWordPairs);
+      console.log('Top 5 Co-occurring Word Pairs:', analysisResult.top5CooccurringWordPairs);
 
       // Log the frequency of each word
       console.log('Word Frequencies:', analysisResult.wordFrequencies);
-
+      res.json({ message: 'File uploaded successfully!' , data:analysisResult, success:true});
     }
   });
 });

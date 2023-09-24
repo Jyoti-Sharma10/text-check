@@ -1,11 +1,30 @@
 import React, { useState } from 'react';
+import img from './assests/fileImg.jpg';
+import './global.css';
+import WordCards from './WordCards';
+import FreqTable from './FreqTable';
 
 function App() {
   const [file, setFile] = useState(null);
+  const [fileUploaded, setFileUploaded] = useState(false);
+  const [data, setData] = useState(null);
 
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
-    if (selectedFile && selectedFile.type === 'text/plain') {
+
+    // Check if a file was selected
+    if (!selectedFile) {
+      alert('Please select a file.');
+      return;
+    }
+
+    // Check if the file size is greater than 5MB (5 * 1024 * 1024 bytes)
+    if (selectedFile.size > 5 * 1024 * 1024) {
+      alert('File size should not exceed 5MB.');
+      return;
+    }
+
+    if (selectedFile.type === 'text/plain') {
       // Only set the file if it's a .txt file
       setFile(selectedFile);
     } else {
@@ -26,9 +45,13 @@ function App() {
       method: 'POST',
       body: formData,
     })
-      .then((res) => res.text())
-      .then((data) => {
-        console.log(data); // You can handle the response from the server here
+      .then((res) => res.json()) 
+      .then((responseData) => {
+        console.log(responseData);
+        setFileUploaded(true);
+
+        // Setting the data received from the API into the state
+        setData(responseData.data);
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -36,11 +59,29 @@ function App() {
   };
 
   return (
-    <div>
-      <input type="file" onChange={handleFileChange} accept=".txt" />
-      <button type="button" onClick={upload}>
-        Upload .txt File
-      </button>
+    <div className='container my-3'>
+      <h2 className='text-center mt-5'>Upload your txt file to analyze</h2>
+      <div className="container">
+        <img
+          src={img} 
+          className="responsive-image"
+          alt="File"
+        />
+      </div>
+      <div className="container my-2 text-center">
+        <input type="file" onChange={handleFileChange} accept=".txt" />
+      </div>
+      <div className="container-my-2 text-center">
+        <button type="button" onClick={upload}>
+          Upload File
+        </button>
+      </div>
+      <div className="container">
+      {/* Conditional render of Cards component */}
+      {fileUploaded && <WordCards data={data} />}
+      {/* Conditiona render of FreqTable component */}
+      {fileUploaded && data.wordFrequencies && <FreqTable wordFrequencies={data.wordFrequencies} />}
+      </div>
     </div>
   );
 }

@@ -8,7 +8,11 @@ function analyzeText(text) {
       };
     }
   
-    const words = text.toLowerCase().split(/\s+/);
+    const words = text
+    .toLowerCase() // Convert to lowercase to ensure case-insensitive counting
+    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '') // Remove punctuation
+    .split(/\s+/); // Split by whitespace
+
     const wordFrequencies = new Map();
     const cooccurringPairs = new Map();
   
@@ -25,6 +29,7 @@ function analyzeText(text) {
       // Count co-occurring pairs
       if (i < words.length - 1) {
         const pair = `${word} ${words[i + 1]}`;
+        console.log("xyz", pair);
         if (cooccurringPairs.has(pair)) {
           cooccurringPairs.set(pair, cooccurringPairs.get(pair) + 1);
         } else {
