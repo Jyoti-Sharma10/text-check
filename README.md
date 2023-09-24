@@ -32,44 +32,6 @@ The Text Analyzer Application allows users to analyze text files (.txt) of up to
 1. Clone the repository to your local machine:
    git clone <repository-url>
 
-Certainly, here's the improved README file with better indentation:
-
-markdown
-Copy code
-# Text Analyzer Application
-
-## Overview
-
-The Text Analyzer Application allows users to analyze text files (.txt) of up to 5 MB in size. The application communicates with a backend API to process the text files and retrieve useful information such as the top 5 most occurring words, the top 5 most co-occurring word pairs, and the frequency of each word in the file. Additionally, the client application provides a keyword search feature for filtering the displayed cards.
-
-## Features
-
-- Upload and analyze text files.
-- Display the top 5 most occurring words.
-- Display the top 5 most co-occurring word pairs.
-- View the frequency of each word in the file.
-- Client-side keyword search to filter displayed cards.
-- Support for text files up to 5 MB in size.
-
-## Technologies Used
-
-- **Frontend**: React.js
-- **Backend**: Node.js and Express.js
-- **File Upload**: FormData and fetch API
-- **API**: Node.js, Express.js, and text processing libraries
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js and npm installed.
-- A code editor such as Visual Studio Code.
-
-### Installation
-
-1. Clone the repository to your local machine:
-   git clone <repository-url>
-
 2.Change to the project directory:
 cd text-analyzer-app
 
@@ -81,7 +43,7 @@ cd ../server
 npm install
 
 ### Running the Application
-Start the backend server (from the server directory):
+1.Start the backend server (from the server directory):
 npm start
 The server will run on http://localhost:5000.
 
@@ -90,77 +52,8 @@ npm start
 The React development server will run on http://localhost:3000.
 
 3.Open your web browser and navigate to http://localhost:3000 to access the Text Analyzer Application.
-
-
-Certainly, here's the improved README file with better indentation:
-
-markdown
-Copy code
-# Text Analyzer Application
-
-## Overview
-
-The Text Analyzer Application allows users to analyze text files (.txt) of up to 5 MB in size. The application communicates with a backend API to process the text files and retrieve useful information such as the top 5 most occurring words, the top 5 most co-occurring word pairs, and the frequency of each word in the file. Additionally, the client application provides a keyword search feature for filtering the displayed cards.
-
-## Features
-
-- Upload and analyze text files.
-- Display the top 5 most occurring words.
-- Display the top 5 most co-occurring word pairs.
-- View the frequency of each word in the file.
-- Client-side keyword search to filter displayed cards.
-- Support for text files up to 5 MB in size.
-
-## Technologies Used
-
-- **Frontend**: React.js
-- **Backend**: Node.js and Express.js
-- **File Upload**: FormData and fetch API
-- **API**: Node.js, Express.js, and text processing libraries
-
-## Getting Started
-
-### Prerequisites
-
 - Node.js and npm installed.
 - A code editor such as Visual Studio Code.
-
-### Installation
-
-1. Clone the repository to your local machine:
-
-   ```bash
-   git clone <repository-url>
-Change to the project directory:
-
-bash
-Copy code
-cd text-analyzer-app
-Install the frontend and backend dependencies:
-
-bash
-Copy code
-cd client
-npm install
-
-cd ../server
-npm install
-Running the Application
-Start the backend server (from the server directory):
-
-bash
-Copy code
-npm start
-The server will run on http://localhost:5000.
-
-Start the frontend development server (from the client directory):
-
-bash
-Copy code
-npm start
-The React development server will run on http://localhost:3000.
-
-Open your web browser and navigate to http://localhost:3000 to access the Text Analyzer Application.
 
 ### Usage
 1.Upload a .txt file by clicking the "Upload File" button on the homepage.
