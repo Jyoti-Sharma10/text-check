@@ -29,25 +29,41 @@ The Text Analyzer Application allows users to analyze text files (.txt) of up to
 
 ### Installation
 
-1. Clone the repository to your local machine:
-   git clone <repository-url> 
-2.Change to the project directory:
+1. **Clone the repository to your local machine:**
+git clone <repository-url> 
+
+2. **Change to the project directory:**
 cd text-analyzer-app
-3.Install the frontend and backend dependencies:
-cd text-check
-npm install
-cd ../server
-npm install
-4.Running the Application
--Start the backend server (from the server directory):
-npm start
-The server will run on http://localhost:5000.
 
--Start the frontend development server (from the client directory):
-npm start
-The React development server will run on http://localhost:3000.
+3. **Install the frontend and backend dependencies:**
+- For the frontend (inside the `text-check` directory):
+  ```
+  cd text-check
+  npm install
+  ```
 
-5.Open your web browser and navigate to http://localhost:3000 to access the Text Analyzer Application.
+- For the backend (inside the `server` directory):
+  ```
+  cd ../server
+  npm install
+  ```
+
+4. **Running the Application:**
+- Start the backend server (from the `server` directory):
+  ```
+  npm start
+  ```
+  The server will run on http://localhost:5000.
+
+- Start the frontend development server (from the `client` directory):
+  ```
+  cd ../client
+  npm start
+  ```
+  The React development server will run on http://localhost:3000.
+
+5. **Open your web browser and navigate to http://localhost:3000 to access the Text Analyzer Application.**
+
 
 ## Usage
 1. **Upload a .txt file by clicking the "Upload File" button on the homepage.**
@@ -63,15 +79,16 @@ The React development server will run on http://localhost:3000.
 
 ## File Structure
 The project directory is structured as follows:
--public and src: Frontend React application.
--server/: Backend Node.js and Express.js application.
--uploads/: Directory for storing uploaded text files.
--README.md: Project documentation.
+- `public` and `src`: Frontend React application.
+- `server/`: Backend Node.js and Express.js application.
+- `uploads/`: Directory for storing uploaded text files.
+- `README.md`: Project documentation.
 
 ## Development Guidelines
-1.Frontend code is located in the /src and /public directory.
-2.Backend code is located in the server directory.
-3.Follow coding conventions and best practices for React and Node.js.
+1. **Frontend code is located in the `/src` and `/public` directory.**
+2. **Backend code is located in the `server` directory.**
+3. **Follow coding conventions and best practices for React and Node.js.**
+
 
 ### Output
 [Assignment.webm](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/e0ab4c28-fe2d-4743-84a7-1057529d8402)
