@@ -11,7 +11,8 @@ function analyzeText(text) {
     const words = text
     .toLowerCase() // Convert to lowercase to ensure case-insensitive counting
     .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '') // Remove punctuation
-    .split(/\s+/); // Split by whitespace
+    .split(/\s+/) // Split by whitespace
+    .filter((word) => word.trim() !== ''); 
 
     const wordFrequencies = new Map();
     const cooccurringPairs = new Map();

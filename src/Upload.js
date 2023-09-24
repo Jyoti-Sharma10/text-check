@@ -9,6 +9,7 @@ function Upload() {
   const [fileUploaded, setFileUploaded] = useState(false);
   const [data, setData] = useState(null);
   const [viewWordCards, setViewWordCards] = useState(true);
+  const [filteredData,  setFilteredData] = useState(null);
 
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
@@ -53,6 +54,7 @@ function Upload() {
 
         // Setting the data received from the API into the state
         setData(responseData.data);
+        setFilteredData(responseData.data);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -96,10 +98,23 @@ function Upload() {
         </button>
       </div>
 
+      <div className="container text-center">
+        <input type="search" placeholder="write keyword" onChange={(e) => {
+            const keyword = e.target.value;
+            console.log(e.target.value, "bfvdc");
+            const filteredData = {
+                ...data,
+                top5CooccurringWordPairs: data.top5CooccurringWordPairs.filter(item => item.includes(keyword)),
+                top5Words: data.top5Words.filter(item => item.includes(keyword))
+              };
+            setFilteredData(filteredData);
+        }}></input>
+      </div>
+
       <div className="container">
         {/* Conditional render based on the viewWordCards state */}
         {viewWordCards
-          ? fileUploaded && <WordCards data={data} />
+          ? fileUploaded && <WordCards data={filteredData} />
           : fileUploaded &&
             data.wordFrequencies && (
               <FreqTable wordFrequencies={data.wordFrequencies} />

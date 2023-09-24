@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+Text Analyzer Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Overview
+The Text Analyzer Application allows users to analyze text files (.txt) of up to 5 MB in size. The application communicates with a backend API to process the text files and retrieve useful information such as the top 5 most occurring words, the top 5 most co-occurring word pairs, and the frequency of each word in the file. Additionally, the client application provides a keyword search feature for filtering the displayed cards.
 
-In the project directory, you can run:
+Features
+-Upload and analyze text files.
+-Display the top 5 most occurring words.
+-Display the top 5 most co-occurring word pairs.
+-View the frequency of each word in the file.
+-Client-side keyword search to filter displayed cards.
+-Support for text files up to 5 MB in size.
 
-### `npm start`
+Technologies Used
+-Frontend: React.js
+-Backend: Node.js and Express.js
+-File Upload: FormData and fetch API
+-API: Node.js, Express.js, and text processing libraries
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Getting Started
+-Prerequisites
+Node.js and npm installed.
+A code editor such as Visual Studio Code.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Installation
+-Clone the repository to your local machine:
+git clone <repository-url>
 
-### `npm test`
+-Change to the project directory:
+cd text-analyzer-app
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install the frontend and backend dependencies:
+cd client
+npm install
 
-### `npm run build`
+cd ../server
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Running the Application
+Start the backend server (from the server directory):
+npm start
+The server will run on http://localhost:5000.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the frontend development server (from the client directory):
+npm start
+The React development server will run on http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Open your web browser and navigate to http://localhost:3000 to access the Text Analyzer Application.
 
-### `npm run eject`
+Usage
+Upload a .txt file by clicking the "Upload File" button on the homepage.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Once the file is uploaded, the application will display the following:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The top 5 most occurring words.
+The top 5 most co-occurring word pairs.
+A keyword search input to filter the displayed cards.
+Enter a keyword in the search input and click the "Search" button to filter the displayed cards based on the keyword.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Click the "Show Frequency Table" button to view the frequency of each word in the uploaded file in a different tab or section.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+File Structure
+The project directory is structured as follows:
 
-## Learn More
+public/ and src/: Frontend React application.
+backend/: Backend Node.js and Express.js application.
+uploads/: Directory for storing uploaded text files.
+README.md: Project documentation.
+Development Guidelines
+Frontend code is located in the public/ and /src directory.
+Backend code is located in the backend directory.
+Follow coding conventions and best practices for React and Node.js.
+Feel free to customize this README template to fit the specific details and structure of your Text Analyzer Application project.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

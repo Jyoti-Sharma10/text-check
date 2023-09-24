@@ -42,21 +42,10 @@ app.post('/upload', upload.single('file'), (req, res) => {
     } else {
       // Analyze the text and get the results
       const analysisResult = analyzeText(data);
-
-      // Log the top 5 most frequently occurring words
-      console.log('Top 5 Words:', analysisResult.top5Words);
-
-      // Log the top 5 most frequently co-occurring word pairs
-      console.log('Top 5 Co-occurring Word Pairs:', analysisResult.top5CooccurringWordPairs);
-
-      // Log the frequency of each word
-      console.log('Word Frequencies:', analysisResult.wordFrequencies);
       res.json({ message: 'File uploaded successfully!' , data:analysisResult, success:true});
     }
   });
 });
-
-
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

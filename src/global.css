@@ -66,18 +66,32 @@
   align-items: center;
 }
 
-
 /* Reduce the width of the table and adjust column widths */
 .table {
-  border-collapse: collapse;
-  width: 60%;
-}
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    color: #fff; /* Set text color to white */
+    border-collapse: separate;
+    border-spacing: 0;
+  }
 
+/* styles.css */
+/* FreqTable.css */
+.custom-table {
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    color: #fff; /* Set text color to white */
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  
+  /* Define other custom styles as needed */
+  
+  
 .table th,
 .table td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
+  background-color: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 
 .table th:first-child,
@@ -96,10 +110,8 @@
 
 .btn-custom {
   appearance: none;
-  background: 
-    #2e3192;
-
-  box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+  background: #5cb85c;
+  box-shadow: 0 2px 8px 0 rgba(102, 226, 77, 0.75);
   border: none; 
   border-radius: 15px;
   box-sizing: border-box;
@@ -109,7 +121,7 @@
   font-weight: 600;
   line-height: normal;
   margin: 2%;
-  min-height: 5vh;
+  min-height: 6vh;
   min-width: 0;
   outline: none;
   padding: 16px 24px;
@@ -124,11 +136,10 @@
 }
 
 .btn-custom:hover {
-  background: linear-gradient(
-    to right,
-    #1bffff,
-    #2e3192
-  ); /* Updated gradient colors on hover */
-  box-shadow: 0 8px 20px 0 rgba(126, 52, 161, 0.75);
+  background: #50C878;
+  box-shadow: 0 5px 12px 0 rgba(65, 226, 106, 0.75);
   transform: translateY(-2px);
 }
+
+
+  
