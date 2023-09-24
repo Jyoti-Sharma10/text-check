@@ -30,32 +30,26 @@ The Text Analyzer Application allows users to analyze text files (.txt) of up to
 ### Installation
 
 1. Clone the repository to your local machine:
-   git clone <repository-url>
-
+   git clone <repository-url> 
 2.Change to the project directory:
 cd text-analyzer-app
-
 3.Install the frontend and backend dependencies:
-cd client
+cd text-check
 npm install
-
 cd ../server
 npm install
-
-### Running the Application
-1.Start the backend server (from the server directory):
+4.Running the Application
+-Start the backend server (from the server directory):
 npm start
 The server will run on http://localhost:5000.
 
-2.Start the frontend development server (from the client directory):
+-Start the frontend development server (from the client directory):
 npm start
 The React development server will run on http://localhost:3000.
 
-3.Open your web browser and navigate to http://localhost:3000 to access the Text Analyzer Application.
-- Node.js and npm installed.
-- A code editor such as Visual Studio Code.
+5.Open your web browser and navigate to http://localhost:3000 to access the Text Analyzer Application.
 
-### Usage
+## Usage
 1.Upload a .txt file by clicking the "Upload File" button on the homepage.
 2.Once the file is uploaded, the application will display the following:
 -The top 5 most occurring words.
@@ -63,5 +57,18 @@ The React development server will run on http://localhost:3000.
 -A keyword search input to filter the displayed cards.
 3.Enter a keyword in the search input and click the "Search" button to filter the displayed cards based on the keyword.
 4.Click the "Show Frequency Table" button to view the frequency of each word in the uploaded file in a different tab or section.
+
+## File Structure
+The project directory is structured as follows:
+-public and src: Frontend React application.
+-server/: Backend Node.js and Express.js application.
+-uploads/: Directory for storing uploaded text files.
+-README.md: Project documentation.
+
+## Development Guidelines
+1.Frontend code is located in the /src and /public directory.
+2.Backend code is located in the server directory.
+3.Follow coding conventions and best practices for React and Node.js.
+
 
 
