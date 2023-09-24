@@ -5,13 +5,13 @@
 The Text Analyzer Application allows users to analyze text files (.txt) of up to 5 MB in size. The application communicates with a backend API to process the text files and retrieve useful information such as the top 5 most occurring words, the top 5 most co-occurring word pairs, and the frequency of each word in the file. Additionally, the client application provides a keyword search feature for filtering the displayed cards.
 
 ## Features
-
-- Upload and analyze text files.
-- Display the top 5 most occurring words.
-- Display the top 5 most co-occurring word pairs.
-- View the frequency of each word in the file.
-- Client-side keyword search to filter displayed cards.
-- Support for text files up to 5 MB in size.
+- **Upload and analyze text files.**
+- **Display the following:**
+  - The top 5 most occurring words.
+  - The top 5 most co-occurring word pairs.
+  - View the frequency of each word in the file.
+  - Client-side keyword search to filter displayed cards.
+  - Support for text files up to 5 MB in size.
 
 ## Technologies Used
 
@@ -50,13 +50,16 @@ The React development server will run on http://localhost:3000.
 5.Open your web browser and navigate to http://localhost:3000 to access the Text Analyzer Application.
 
 ## Usage
-1.Upload a .txt file by clicking the "Upload File" button on the homepage.
-2.Once the file is uploaded, the application will display the following:
--The top 5 most occurring words.
--The top 5 most co-occurring word pairs.
--A keyword search input to filter the displayed cards.
-3.Enter a keyword in the search input and click the "Search" button to filter the displayed cards based on the keyword.
-4.Click the "Show Frequency Table" button to view the frequency of each word in the uploaded file in a different tab or section.
+1. **Upload a .txt file by clicking the "Upload File" button on the homepage.**
+
+2. **Once the file is uploaded, the application will display the following:**
+   - The top 5 most occurring words.
+   - The top 5 most co-occurring word pairs.
+   - A keyword search input to filter the displayed cards.
+
+3. **Enter a keyword in the search input and click the "Search" button to filter the displayed cards based on the keyword.**
+
+4. **Click the "Show Frequency Table" button to view the frequency of each word in the uploaded file in a different tab or section.**
 
 ## File Structure
 The project directory is structured as follows:
