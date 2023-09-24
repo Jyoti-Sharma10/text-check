@@ -73,4 +73,6 @@ The project directory is structured as follows:
 ### Output
 [Assignment.webm](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/e0ab4c28-fe2d-4743-84a7-1057529d8402)
 
+[Assignment2.webm](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/ffa83f38-db7c-436f-b132-c657c44f59e3)
+
 
