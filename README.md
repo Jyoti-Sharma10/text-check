@@ -93,6 +93,8 @@ The project directory is structured as follows:
 ### Output
 [Assignment.webm](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/e0ab4c28-fe2d-4743-84a7-1057529d8402)
 [Assignment2.webm](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/ffa83f38-db7c-436f-b132-c657c44f59e3)
+
+
 ![img1](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/1ce8cc8f-75f1-4aa3-9d7d-61e639fcf811)
 ![img2](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/52efa21c-86a6-4d8d-b957-bd4b2b99c716)
 ![img3](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/d9b899f6-8969-4259-a003-b15bf7dd2cd9)
