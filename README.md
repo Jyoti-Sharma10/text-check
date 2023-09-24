@@ -70,5 +70,7 @@ The project directory is structured as follows:
 2.Backend code is located in the server directory.
 3.Follow coding conventions and best practices for React and Node.js.
 
+### Output
+[Assignment.webm](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/e0ab4c28-fe2d-4743-84a7-1057529d8402)
 
 
