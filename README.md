@@ -75,4 +75,13 @@ The project directory is structured as follows:
 
 [Assignment2.webm](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/ffa83f38-db7c-436f-b132-c657c44f59e3)
 
+![img1](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/1ce8cc8f-75f1-4aa3-9d7d-61e639fcf811)
+![img2](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/52efa21c-86a6-4d8d-b957-bd4b2b99c716)
+![img3](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/d9b899f6-8969-4259-a003-b15bf7dd2cd9)
+
+![img4](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/c39b87f0-3200-45c0-9ecd-9ac0e832eb03)
+![img5](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/052f0ae4-e1a1-453c-84b6-f4ca62c2ce11)
+![img6](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/12c2ce89-4ef0-4f95-ba4e-fefbb75943b5)
+![img7](https://github.com/Jyoti-Sharma10/text-check/assets/73213971/bd083e33-b1da-4cb9-9d50-a47a74fd667b)
+
 
